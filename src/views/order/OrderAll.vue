@@ -162,6 +162,7 @@
                 </vs-td>
                 <vs-td>
                   <vs-button
+                    :disabled="order.orderStatus == '주문취소'"
                     gradient
                     :active="active == 0"
                     @click="updateShipment(i)"
@@ -171,6 +172,9 @@
                 </vs-td>
                 <vs-td>
                   <vs-button
+                    :disabled="
+                      order.deliveryStatus == '배송완료' 
+                      || order.orderStatus == '주문취소'"
                     danger
                     :active="active == 0"
                     @click="cancelOrder(i)"

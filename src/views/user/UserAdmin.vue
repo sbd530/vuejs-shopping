@@ -6,8 +6,17 @@
       <b-row class="box">
         <b-row>
           <b-col>User</b-col>
-          <b-col></b-col>
-          <b-col></b-col>
+          <b-col align="right">
+            <b-form-select v-model="max" seleted="5" class="mb-3">
+              <b-form-select-option :value="5"
+                >Select an option</b-form-select-option
+              >
+              <b-form-select-option value="10">10 개</b-form-select-option>
+              <b-form-select-option value="15">15 개</b-form-select-option>
+              <b-form-select-option value="20">20 개</b-form-select-option>
+              <b-form-select-option value="25">25 개</b-form-select-option>
+            </b-form-select>
+          </b-col>
         </b-row>
       </b-row>
       <b-row class="box">
@@ -109,10 +118,8 @@ export default {
     return {
       search: "",
       page: 1,
-      max: 1,
+      max: 5,
       users: [],
-      perPage: 10,
-      currentPage: 1,
     };
   },
   mounted() {
@@ -174,5 +181,8 @@ export default {
 }
 .table {
   font-size: 20pt;
+}
+.mb-3 {
+  width: 150px;
 }
 </style>

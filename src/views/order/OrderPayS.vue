@@ -174,6 +174,7 @@
                 </vs-td>
                 <vs-td>
                   <vs-button
+                    :disabled="order.deliveryStatus == '배송완료'"
                     danger
                     :active="active == 0"
                     @click="cancelOrder(i)"
