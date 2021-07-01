@@ -14,10 +14,6 @@ import OrderDeliveryDone from "../views/order/OrderDeliveryDone.vue";
 import MainAdmin from "../views/MainAdmin.vue";
 //고객
 import UserAdmin from "../views/user/UserAdmin.vue";
-//게시판
-import Board from "../views/board/Board.vue";
-import BoardContent from "../views/board/BoardContent.vue";
-import BoardCreate from "../views/board/BoardCreate.vue";
 //후기,질문
 import Review from "../views/questions/Review.vue";
 import Question from "../views/questions/Question.vue";
@@ -81,19 +77,6 @@ export const router = new VueRouter({
       component: UserAdmin,
     },
     
-    //게시판
-    {
-      path: "/dashboard/board",
-      component: Board,
-    },
-    {
-      path: "/dashboard/board/boardcontent/:contentId",
-      component: BoardContent,
-    },
-    {
-      path: "/dashboard/board/boardcreate/",
-      component: BoardCreate,
-    },
     //후기와 질문
     {
       path: "/dashboard/review",

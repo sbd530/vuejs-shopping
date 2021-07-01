@@ -10,14 +10,11 @@
 
 <script>
 import SideToolBar from "./components/SideToolBar.vue";
-import Spinner from "./components/Spinner.vue";
-import bus from "./utils/bus.js";
 
 export default {
   name: "App",
   components: {
     SideToolBar,
-    Spinner,
   },
   data() {
     return {
@@ -32,14 +29,7 @@ export default {
       this.loadingStatus = false;
     },
   },
-  created() {
-    bus.$on("start:spinner", this.startSpinner);
-    bus.$on("end:spinner", this.endSpinner);
-  },
-  beforeDestroy() {
-    bus.$off("start:spinner", this.startSpinner);
-    bus.$off("end:spinner", this.endSpinner);
-  },
+
 };
 </script>
 
